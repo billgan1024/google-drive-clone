@@ -2,6 +2,7 @@ import React, {useRef, useState} from "react";
 import { Form, Button,  Alert } from "react-bootstrap";
 import {useAuth} from "../contexts/AuthContext";
 import {Link, useHistory} from "react-router-dom";
+import {parseError} from "./App";
 
 export default function Login() {
     //use refs for data
@@ -24,7 +25,7 @@ export default function Login() {
             history.push("/");
         } catch(e) {
             console.log(e);
-            setError("Failed to log in.");
+            setError(parseError(e));
         }
         setLoading(false);
     }

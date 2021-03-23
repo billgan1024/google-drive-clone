@@ -2,6 +2,7 @@ import React, {useRef, useState} from "react";
 import { Form, Button, Alert } from "react-bootstrap";
 import {useAuth} from "../contexts/AuthContext";
 import {Link, useHistory} from "react-router-dom";
+import {parseError} from "./App";
 
 export default function Signup() {
     //use refs for data
@@ -31,7 +32,7 @@ export default function Signup() {
             history.push("/");
         } catch(e) {
             console.log(e);
-            setError("Failed to create an account.");
+            setError(parseError(e));
         }
         setLoading(false);
     }

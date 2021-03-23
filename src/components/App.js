@@ -11,6 +11,16 @@ import PrivateRoute from "./PrivateRoute";
 import ForgotPassword from "./ForgotPassword";
 import ChangePassword from "./ChangePassword";
 
+export function parseError(e) {
+	switch(e.code.replace("auth/", "")) {
+		case "weak-password": return "Password must be at least 6 characters in length."; break;
+		case "invalid-email": return "Invalid email address."; break;
+		case "user-not-found": return "Invalid email address or password."; break;
+		case "wrong-password": return "Invalid email address or password."; break;
+		default: return e.message; break;
+	}
+}
+
 function App() {
 	return (
 		<>

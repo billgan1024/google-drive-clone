@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {Card, Button, Alert} from "react-bootstrap";
 import {useAuth} from "../contexts/AuthContext";
 import {Link, useHistory} from "react-router-dom";
+import {parseError} from "./App";
 
 export default function Dashboard() {
     const [error, setError] = useState("");
@@ -15,7 +16,7 @@ export default function Dashboard() {
             history.push("/login");
         } catch(e) {
             console.log(e);
-            setError("Failed to log out.");
+            setError(parseError(e));
         }
     }
     return (

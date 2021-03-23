@@ -30,11 +30,11 @@ export function AuthProvider({children}) {
     }
 
     function updateEmail(email) {
-        currentUser.updateEmail(email);
+        return currentUser.updateEmail(email);
     }
 
     function updatePassword(password) {
-        currentUser.updatePassword(password);
+        return currentUser.updatePassword(password);
     }
 
     //change user event (only called once this component mounts)

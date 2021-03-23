@@ -2,10 +2,10 @@ import React, {useRef, useState} from "react";
 import { Form, Button, Alert } from "react-bootstrap";
 import {useAuth} from "../contexts/AuthContext";
 import {Link, useHistory} from "react-router-dom";
+import {parseError} from "./App";
 
 export default function ChangePassword() {
     //use refs for data
-    const emailRef = useRef();
     const passwordRef = useRef();
     const passwordConfirmRef = useRef();
     //pull the signup function from useAuth as well as current user data
@@ -26,10 +26,9 @@ export default function ChangePassword() {
             setLoading(true);
             await updatePassword(passwordRef.current.value);
             setMessage("Password has been changed.");
-
         } catch(e) {
             console.log(e);
-            setError("Failed to change password.");
+            setError(parseError(e));
         }
         setLoading(false);
     }

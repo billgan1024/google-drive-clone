@@ -2,6 +2,7 @@ import React, {useRef, useState} from "react";
 import { Form, Button,  Alert } from "react-bootstrap";
 import {useAuth} from "../contexts/AuthContext";
 import {Link, useHistory} from "react-router-dom";
+import {parseError} from "./App";
 
 export default function ForgotPassword() {
     //use refs for data
@@ -23,7 +24,7 @@ export default function ForgotPassword() {
             setMessage("A password reset email has been sent.");
         } catch(e) {
             console.log(e);
-            setError("Failed to reset password.");
+            setError(parseError(e));
         }
         setLoading(false);
     }
