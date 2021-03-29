@@ -2,7 +2,8 @@ import React, {useRef, useState} from "react";
 import { Form, Button, Alert } from "react-bootstrap";
 import {useAuth} from "../contexts/AuthContext";
 import {Link, useHistory} from "react-router-dom";
-import {parseError} from "./App";
+import {parseError, Vid} from "./App";
+import CenteredContainer from "./CenteredContainer";
 
 export default function Signup() {
     //use refs for data
@@ -29,7 +30,7 @@ export default function Signup() {
             //login using input data
             await signup(emailRef.current.value, passwordRef.current.value);
             //go to the dashboard
-            history.push("/");
+            history.push("/drive");
         } catch(e) {
             console.log(e);
             setError(parseError(e));
@@ -38,6 +39,8 @@ export default function Signup() {
     }
     return (
         <>
+        <Vid/>
+        <CenteredContainer>
             <h2 className="text-center mb-4" style={{color: "white"}}>Sign up</h2>
             {error && <Alert variant="danger">{error}</Alert>}
             <Form onSubmit={handleSubmit}>
@@ -58,6 +61,7 @@ export default function Signup() {
             <div className="w-100 text-center mt-2" style={{color: "white"}}>
                 Already have an account? <Link to="/login" style={{textDecoration: "none"}}>Log in</Link>
             </div>
+        </CenteredContainer>
         </>
     )
 }

@@ -1,8 +1,9 @@
 import React, {useRef, useState} from "react";
 import { Form, Button,  Alert } from "react-bootstrap";
 import {useAuth} from "../contexts/AuthContext";
-import {Link, useHistory} from "react-router-dom";
-import {parseError} from "./App";
+import {Link} from "react-router-dom";
+import {parseError, Vid} from "./App";
+import CenteredContainer from "./CenteredContainer";
 
 export default function ForgotPassword() {
     //use refs for data
@@ -30,7 +31,9 @@ export default function ForgotPassword() {
     }
     return (
         <>
-            <h2 className="text-center mb-4" style={{color: "white"}}>Reset Password</h2>
+        <Vid/>
+        <CenteredContainer>
+            <h3 className="text-center mb-4" style={{color: "white"}}>Reset Password</h3>
             {error && <Alert variant="danger">{error}</Alert>}
             {message && <Alert variant="success">{message}</Alert>}
             <Form onSubmit={handleSubmit}>
@@ -46,6 +49,7 @@ export default function ForgotPassword() {
             <div className="w-100 text-center mt-2" style={{color: "white"}}>
                 Don't have an account? <Link to="/signup" style={{textDecoration: "none"}}>Sign up</Link>
             </div>
+        </CenteredContainer>
         </>
     )
 }

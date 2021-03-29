@@ -2,9 +2,11 @@ import React, {useState} from "react";
 import {Card, Button, Alert} from "react-bootstrap";
 import {useAuth} from "../contexts/AuthContext";
 import {Link, useHistory} from "react-router-dom";
-import {parseError} from "./App";
+import {Img, parseError} from "./App";
+import CenteredContainer from "./CenteredContainer";
+import NavigationBar from "./NavigationBar";
 
-export default function Dashboard() {
+export default function Profile() {
     const [error, setError] = useState("");
     const {currentUser, logout} = useAuth();
     const history = useHistory();
@@ -21,6 +23,9 @@ export default function Dashboard() {
     }
     return (
         <>
+        <Img/>
+        <NavigationBar activeKey="profile" fixed="top"/>
+        <CenteredContainer>
         <Card>
             <Card.Body>
                 <h3 className="text-center mb-4">Profile</h3>
@@ -32,6 +37,7 @@ export default function Dashboard() {
         <div className="w-100 text-center mt-2" style={{color: "white"}}>
             <Button variant="danger" onClick={handleLogout}>Log out</Button>
         </div>
+        </CenteredContainer>
         </>
     )
 }
