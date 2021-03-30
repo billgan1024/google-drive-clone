@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/google-drive-clone/static/css/main.41867bbb.chunk.css",
-    "main.js": "/google-drive-clone/static/js/main.53f72932.chunk.js",
-    "main.js.map": "/google-drive-clone/static/js/main.53f72932.chunk.js.map",
-    "runtime-main.js": "/google-drive-clone/static/js/runtime-main.cf3f4862.js",
-    "runtime-main.js.map": "/google-drive-clone/static/js/runtime-main.cf3f4862.js.map",
-    "static/css/2.4c97ca4f.chunk.css": "/google-drive-clone/static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.fe7ffe0a.chunk.js": "/google-drive-clone/static/js/2.fe7ffe0a.chunk.js",
-    "static/js/2.fe7ffe0a.chunk.js.map": "/google-drive-clone/static/js/2.fe7ffe0a.chunk.js.map",
-    "index.html": "/google-drive-clone/index.html",
-    "static/css/2.4c97ca4f.chunk.css.map": "/google-drive-clone/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.41867bbb.chunk.css.map": "/google-drive-clone/static/css/main.41867bbb.chunk.css.map",
-    "static/js/2.fe7ffe0a.chunk.js.LICENSE.txt": "/google-drive-clone/static/js/2.fe7ffe0a.chunk.js.LICENSE.txt",
-    "static/media/pic.fc4e6b57.png": "/google-drive-clone/static/media/pic.fc4e6b57.png",
-    "static/media/video.a2703484.mp4": "/google-drive-clone/static/media/video.a2703484.mp4"
+    "main.css": "/static/css/main.41867bbb.chunk.css",
+    "main.js": "/static/js/main.53f72932.chunk.js",
+    "main.js.map": "/static/js/main.53f72932.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b9814e7c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b9814e7c.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.1e755809.chunk.js": "/static/js/2.1e755809.chunk.js",
+    "static/js/2.1e755809.chunk.js.map": "/static/js/2.1e755809.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.41867bbb.chunk.css.map": "/static/css/main.41867bbb.chunk.css.map",
+    "static/js/2.1e755809.chunk.js.LICENSE.txt": "/static/js/2.1e755809.chunk.js.LICENSE.txt",
+    "static/media/pic.fc4e6b57.png": "/static/media/pic.fc4e6b57.png",
+    "static/media/video.a2703484.mp4": "/static/media/video.a2703484.mp4"
   },
   "entrypoints": [
-    "static/js/runtime-main.cf3f4862.js",
+    "static/js/runtime-main.b9814e7c.js",
     "static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.fe7ffe0a.chunk.js",
+    "static/js/2.1e755809.chunk.js",
     "static/css/main.41867bbb.chunk.css",
     "static/js/main.53f72932.chunk.js"
   ]
