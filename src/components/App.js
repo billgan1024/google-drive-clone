@@ -53,6 +53,8 @@ function App() {
 					Note: the drive and drive folder path is exact since we don't want incorrect link matching
 					Also use dynamic links*/}
 					<PrivateRoute exact path="/drive" component={Dashboard}></PrivateRoute>
+					
+					{/*note: the :folderId gives data to useParams so that the folderId can be read by Dashboard */}
 					<PrivateRoute exact path="/drive/folder/:folderId" component={Dashboard}></PrivateRoute>
 
 					{/* Profile */}

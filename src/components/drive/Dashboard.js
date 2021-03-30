@@ -3,7 +3,7 @@ import NavigationBar from "../NavigationBar";
 import AddFolderButton from "./AddFolderButton";
 import AddFileButton from "./AddFileButton";
 import {Container, Alert} from "react-bootstrap";
-import {useFolder} from "../../hooks/useFolder";
+import {ROOT_FOLDER, useFolder} from "../../hooks/useFolder";
 import Folder from "./Folder";
 import {useParams, useLocation} from "react-router-dom";
 import FolderBreadcrumbs from "./FolderBreadcrumbs";
@@ -11,12 +11,18 @@ import File from "./File";
 import { Img } from "../App";
 
 export default function Dashboard() {
-    //get folderId from the actual website link to query the database for this specific folder
+    //get folderId from the actual website link to query the database for this specific folder (check App.js)
     const {folderId} = useParams();
+    //state is obtained via useLocation which grabs it from the 'to' prop 
+    //note: whenever you reach another path, folder, childFolders, and childFiles get pulled again 
+    
+    //use state given by the link object pushed by to={object} or history.push({object}) to preload the new path
+    //by default, it's the root folder
     const {state = {}} = useLocation();
     const {folder, childFolders, childFiles} = useFolder(folderId, state.folder);
     const [message, setMessage] = useState("");
     const [show, setShow] = useState(false);
+    
     console.log(childFolders);
     return (
         <>

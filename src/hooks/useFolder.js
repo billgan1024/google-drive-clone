@@ -67,7 +67,6 @@ export function useFolder(folderId = null, folder = null) {
                 payload: {folder: ROOT_FOLDER}
             });
         }
-        
         //when we have a folder id, update the folder object by getting it from the firebase database
         //also format the folder into a usable object
         database.folders.doc(folderId).get().then(doc => {
@@ -78,13 +77,8 @@ export function useFolder(folderId = null, folder = null) {
         }).catch((e) => {
             console.error(e);
             //go back to the drive page if this folderId is invalid
-            /*dispatch({
-                type: ACTIONS.UPDATE_FOLDER,
-                payload: {folder: ROOT_FOLDER}
-            });*/
-            history.push("/drive");
+            history.push({pathname: "/drive", state: {folder: ROOT_FOLDER}});
         });
-
     }, [folderId, history]);
 
     //run every time the current folder id changes (update child folders)
