@@ -1,6 +1,6 @@
 # Google Drive Clone with React and Firebase
 
-This project is a template file hosting app using React and Firebase's database and storage systems. Supports authentication, account creation/deletion, and uploading and deleting files.
+This project is a template file hosting app using React and Firebase's database and storage systems. Front-end stuff was made with React Bootstrap. Supports authentication, account creation/deletion, and uploading and deleting files.
 
 # Create an account
 ![createaccount](https://github.com/pblpbl1024/google-drive-clone/blob/main/src/assets/demo.png)
