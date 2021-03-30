@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/google-drive-clone/static/css/main.41867bbb.chunk.css",
-    "main.js": "/google-drive-clone/static/js/main.a3175e40.chunk.js",
-    "main.js.map": "/google-drive-clone/static/js/main.a3175e40.chunk.js.map",
+    "main.js": "/google-drive-clone/static/js/main.487b9594.chunk.js",
+    "main.js.map": "/google-drive-clone/static/js/main.487b9594.chunk.js.map",
     "runtime-main.js": "/google-drive-clone/static/js/runtime-main.cf3f4862.js",
     "runtime-main.js.map": "/google-drive-clone/static/js/runtime-main.cf3f4862.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/google-drive-clone/static/css/2.4c97ca4f.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.fe7ffe0a.chunk.js",
     "static/css/main.41867bbb.chunk.css",
-    "static/js/main.a3175e40.chunk.js"
+    "static/js/main.487b9594.chunk.js"
   ]
 }
